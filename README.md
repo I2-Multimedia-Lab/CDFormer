@@ -1,4 +1,4 @@
-# CDFormer
+# CDFormer: When Degradation Prediction Embraces Diffusion Model for Blind Image Super-Resolution
 
 Created by [Qingguo Liu](https://github.com/users/zbhfc712), [Chenyi Zhuang](https://github.com/Sheryl-Z), [Pan Gao]()\*, [Jie Qin]()\*
 
