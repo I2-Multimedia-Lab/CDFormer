@@ -11,6 +11,8 @@ Existing Blind image Super-Resolution (BSR) methods focus on estimating either k
 ## 🔥News
 - **2024-02-27** CDFormer is accepted by CVPR 2023.
 
+![intro](figs/network.pdf)
+
 # Acknowledgements
 This code is built on [DASR](https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR) and [DiffIR](https://github.com/Zj-BinXia/DiffIR). We thank the authors for sharing the excellent codes.
 
