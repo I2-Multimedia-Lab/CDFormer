@@ -19,7 +19,7 @@ Existing Blind image Super-Resolution (BSR) methods focus on estimating either k
 ![intro](fig/fig4.png)
 ![intro](fig/fig5.png)
 # Acknowledgements
-This code is built on [DASR](https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR) and [DiffIR](https://github.com/Zj-BinXia/DiffIR). We thank the authors for sharing the excellent codes.
+This code is built on [DASR](https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR), [DAT](https://github.com/zhengchen1999/DAT) and [DiffIR](https://github.com/Zj-BinXia/DiffIR). We thank the authors for sharing the excellent codes.
 
 ## Citation
 If you find our work useful in your research, please consider citing: 
