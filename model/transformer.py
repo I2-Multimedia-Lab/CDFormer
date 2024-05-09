@@ -521,6 +521,7 @@ class CDIM(nn.Module):
 
 
 class CDRB(nn.Module):
+    # The implementation builds on https://github.com/zhengchen1999/DAT
     def __init__(self, dim, num_heads, reso=64, split_size=[2,4],shift_size=[1,2], expansion_factor=4., qkv_bias=False, qk_scale=None, drop=0.,
                  attn_drop=0., drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm, rg_idx=0, b_idx=0):
         super().__init__()
