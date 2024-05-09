@@ -30,22 +30,14 @@ Run `python main.py` to train on the DF2K dataset. Please update `dir_data` in t
 ## Test
 ### 1. Prepare test data 
 Download [benchmark datasets](https://github.com/xinntao/BasicSR/blob/a19aac61b277f64be050cef7fe578a121d944a0e/docs/Datasets.md) (e.g., Set5, Set14 and other test sets) and prepare HR/LR images in `your_data_path/benchmark`.
-<!-- Notion!!! The result is different from the main text, it is nrom!!!
-![intro](fig/tab2.png)
-![intro](fig/tab3.png) -->
 ### 2. Prepare pretrained model 
-Download [benchmark datasets](https://github.com/xinntao/BasicSR/blob/a19aac61b277f64be050cef7fe578a121d944a0e/docs/Datasets.md) (e.g., Set5, Set14 and other test sets) and prepare HR/LR images in `your_data_path/benchmark`.
+Download [pretrained model]()  in `your_data_path`(e.g., for `x2` scale, download `experiment\cdformer_x2_bicubic_iso\model\model_1200pt` in `your_data_path\experiment\cdformer_x2_bicubic_iso\model\model_1200pt`).
 
 ### 3. Begin to test
-Run `python test.py` to test on benchmark datasets. Please update `dir_data` in the bash file as `your_data_path` and selection parameter.
-
-<!-- ![intro](fig/network.png)
-![intro](fig/Details.png)
-![intro](fig/tab1.png)
-![intro](fig/tab2.png)
-![intro](fig/tab3.png)
-![intro](fig/fig4.png)
-![intro](fig/fig5.png) -->
+Run `python test_x2.py` to test scale 2 on benchmark datasets. 
+Run `python test_x3.py` to test scale 3 on benchmark datasets.
+Run `python test_x4.py` to test scale 4 on benchmark datasets.
+Please update `dir_data` in the bash file as `your_data_path` and selection parameter.
 # Acknowledgements
 This code is built on [DASR](https://github.com/The-Learning-And-Vision-Atelier-LAVA/DASR), [DAT](https://github.com/zhengchen1999/DAT) and [DiffIR](https://github.com/Zj-BinXia/DiffIR). We thank the authors for sharing the excellent codes.
 
