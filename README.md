@@ -31,7 +31,7 @@ Run `python main.py` to train on the DF2K dataset. Please update `dir_data` in t
 ### 1. Prepare test data 
 Download [benchmark datasets](https://github.com/xinntao/BasicSR/blob/a19aac61b277f64be050cef7fe578a121d944a0e/docs/Datasets.md) (e.g., Set5, Set14 and other test sets) and prepare HR/LR images in `your_data_path/benchmark`.
 ### 2. Prepare pretrained model 
-Download [pretrained model]()  in `your_data_path`(e.g., for `x2` scale, download `experiment\cdformer_x2_bicubic_iso\model\model_1200pt` in `your_data_path\experiment\cdformer_x2_bicubic_iso\model\model_1200pt`).
+Download [pretrained model](https://drive.google.com/drive/folders/1zWAPqE23VBBy7bpTyM7omTERrn6bXq0x?usp=sharing)  in `your_data_path`(e.g., for `x2` scale, download `experiment\cdformer_x2_bicubic_iso\model\model_1200pt` in `your_data_path\experiment\cdformer_x2_bicubic_iso\model\model_1200pt`).
 
 ### 3. Begin to test
 Run `python test_x2.py` to test scale 2 on benchmark datasets. 
