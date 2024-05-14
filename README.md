@@ -2,7 +2,7 @@
 
 Created by [Qingguo Liu](https://github.com/users/zbhfc712), [Chenyi Zhuang](https://github.com/Sheryl-Z), [Pan Gao]()\*, [Jie Qin]()\*
 
-[[arXiv]]() [[supp]]()
+[[arXiv]](https://arxiv.org/abs/2405.07648) [[supp]]()
 
 This repository contains PyTorch implementation for __CDFormer: When Degradation Prediction Embraces Diffusion Model for Blind Image Super-Resolution__ (Accepted by CVPR 2024).
 ## 🔥Abstract
