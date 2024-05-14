@@ -322,7 +322,7 @@ class SRMDPreprocessing(object):
             if self.noise > 0:
                 _, C, H_lr, W_lr = lr_blured.size()
                 noise_level = torch.rand(B, 1, 1, 1, 1).to(lr_blured.device) * self.noise if random else self.noise
-                torch.manual_seed(self.seed)
+                # torch.manual_seed(self.seed)
                 noise = torch.randn_like(lr_blured).view(-1, N, C, H_lr, W_lr).mul_(noise_level).view(-1, C, H_lr, W_lr)
                 lr_blured.add_(noise)
             # print(lr_blured)
