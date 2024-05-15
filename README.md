@@ -15,6 +15,7 @@ This repository contains PyTorch implementation for __CDFormer: When Degradation
 
 ## 🔥Environment
 Python 3.8.8 and Pytorch 2.0.1. Details can be found in `requirements.txt`. 
+You can also use the command `conda create -n test2 python=3.8.8` and `pip install -r requirements.txt`.
 
 ## 🔥Train
 ### 1. Prepare training data 
