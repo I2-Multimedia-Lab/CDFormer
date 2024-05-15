@@ -25,7 +25,7 @@ parser.add_argument('--dir_demo', type=str, default='test',
                     help='demo image directory')
 parser.add_argument('--data_train', type=str, default='DF2K',
                     help='train dataset name')
-parser.add_argument('--data_test', type=str, default='Set5',
+parser.add_argument('--data_test', type=str, default='Set5', # 'FreeData' if you want test your own test image set. 
                     help='test dataset name')
 parser.add_argument('--data_range', type=str, default='1-3450/801-810',
                     help='train/test data range')
