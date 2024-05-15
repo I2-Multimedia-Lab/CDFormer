@@ -15,7 +15,7 @@ class Data:
                 pin_memory=False
             )
 
-        if args.data_test in ['Set5', 'Set14', 'BSDS100', 'manga109', 'Urban100', 'RealSRSet']:
+        if args.data_test in ['Set5', 'Set14', 'BSDS100', 'manga109', 'Urban100', 'RealSRSet', 'FreeData']:
             module_test = import_module('data.benchmark')
             testset = getattr(module_test, 'Benchmark')(args, name=args.data_test,train=False)
         else:
