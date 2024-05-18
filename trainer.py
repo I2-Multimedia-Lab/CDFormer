@@ -184,30 +184,33 @@ class Trainer():
                     timer_test.tic()
                     hr = hr[:, 0, ...]                  # b, c, h, w
                     lr = lr[:, 0, ...]
-                    sr = self.model((lr, hr,True))
-                    timer_test.hold()
+                    if self.args.data_test == 'FreeData':
+                        sr = self.model((hr, hr,True))
+                        sr = utility.quantize(sr, self.args.rgb_range)
+                    else:
+                        sr = self.model((lr, hr,True))
+                        timer_test.hold()
 
-                    sr = utility.quantize(sr, self.args.rgb_range)
-                    hr = utility.quantize(hr, self.args.rgb_range)
+                        sr = utility.quantize(sr, self.args.rgb_range)
+                        hr = utility.quantize(hr, self.args.rgb_range)
 
-                    psnr = utility.calc_psnr(
-                        sr, hr, scale, self.args.rgb_range,
-                        benchmark=self.loader_test.dataset.benchmark
-                    )
-                    ssim = utility.calc_ssim(
-                        sr, hr, scale,
-                        benchmark=self.loader_test.dataset.benchmark
-                    )
-                    eval_psnr += psnr
-                    eval_ssim += ssim
-                    print('Testing {:20s} - PSNR: {:.2f} dB; SSIM: {:.4f};'.
-                          format(filename[0], psnr, ssim))
+                        psnr = utility.calc_psnr(
+                            sr, hr, scale, self.args.rgb_range,
+                            benchmark=self.loader_test.dataset.benchmark
+                        )
+                        ssim = utility.calc_ssim(
+                            sr, hr, scale,
+                            benchmark=self.loader_test.dataset.benchmark
+                        )
+                        eval_psnr += psnr
+                        eval_ssim += ssim
+                        print('Testing {:20s} - PSNR: {:.2f} dB; SSIM: {:.4f};'.
+                            format(filename[0], psnr, ssim))
                     # save results
                     if self.args.save_results:
                         save_list = [sr]
                         filename = filename[0]
                         self.ckp.save_results(filename, save_list, scale)
-                print(len(self.loader_test))
                 self.ckp.log[-1, idx_scale] = eval_psnr / len(self.loader_test)
                 self.ckp.write_log(
                     '[Epoch {}---{} x{}]\tPSNR: {:.3f} SSIM: {:.4f}'.format(
