@@ -133,7 +133,7 @@ class denoise(nn.Module):
             nn.LeakyReLU(0.1, True),
         )
 
-    def forward(self,x, t,c):
+    def forward(self, x, t, c):
         t=t.float()
         t =t/self.max_period
         t=t.view(-1,1)
