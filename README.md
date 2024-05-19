@@ -10,8 +10,6 @@ This repository contains PyTorch implementation for __CDFormer: When Degradation
 ## 🔥News
 - **2024-02-27** CDFormer is accepted by CVPR 2024.
 
-## 🔥Results
-![intro](fig/iamge_040.gif)
 
 ## 🔥Environment
 Python 3.8.8 and Pytorch 2.0.1. Details can be found in `requirements.txt`. 
