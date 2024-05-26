@@ -21,8 +21,11 @@ Python 3.8.8 and Pytorch 2.0.1. Details can be found in `requirements.txt`.
 
 1.2 Combine the HR images from these two datasets in `your_data_path/DF2K/HR` to build the DF2K dataset. 
 
-### 2. Begin to train
+### 2. Resume training from pretrained model
 Run `python main.py` to train on the DF2K dataset. Please update `dir_data` in the bash file as `your_data_path`.
+
+### 3. Start training from scratch
+Run `python main.py --start_epoch 0` to train on the DF2K dataset. Please update `dir_data` in the bash file as `your_data_path`.
 
 ## Test
 ### 1. Prepare test data 
